@@ -4,18 +4,17 @@
 #include <assert.h>
 
 #include "binarytree.h"
+#include "problems.h"
 
 int main()
 {
-	struct node *tree = new_node(0);
+	struct node *tree = build123();
 
-	bool haszero = lookup(tree, 0);
-	bool hasone = lookup(tree, 1);
+	for (int i = 1; i < 4; ++i)
+		assert(lookup(tree, i));
 
-	assert(haszero);
-	assert(!hasone);
-
-	free(tree);
+	free(tree->left);
+	free(tree->right);
 	free(tree);
 
 	return 0;

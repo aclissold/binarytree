@@ -19,7 +19,7 @@ bool lookup(struct node *node, int target)
 	}
 }
 
-struct node *NewNode(int data)
+struct node *new_node(int data)
 {
 	struct node *node = malloc(sizeof(struct node));
 	node->data = data;
@@ -32,7 +32,7 @@ struct node *NewNode(int data)
 struct node *insert(struct node *node, int data)
 {
 	if (node == NULL) {
-		return NewNode(data);
+		return new_node(data);
 	} else {
 		if (data <= node->data)
 			node->left = insert(node->left, data);

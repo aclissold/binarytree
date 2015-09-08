@@ -7,7 +7,7 @@
 
 int main()
 {
-	struct node *tree = NewNode(0);
+	struct node *tree = new_node(0);
 
 	bool haszero = lookup(tree, 0);
 	bool hasone = lookup(tree, 1);

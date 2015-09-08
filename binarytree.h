@@ -8,7 +8,7 @@ struct node {
 	struct node *left;
 	struct node *right;
 };
-struct node *NewNode(int data);
+struct node *new_node(int data);
 
 bool lookup(struct node *node, int target);
 struct node *insert(struct node *node, int data);

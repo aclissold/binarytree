@@ -1,5 +1,5 @@
 OUT = main
-BUILD = cc binarytree.c main.c -o $(OUT)
+BUILD = cc *.c -o $(OUT)
 
 all:
 	$(BUILD)

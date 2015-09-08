@@ -4,6 +4,6 @@ OUT = main
 all:
 	$(BUILD)
 build_and_run:
-	clear; $(BUILD) && ./$(OUT)
+	$(BUILD) && ./$(OUT)
 clean:
 	rm -f $(OUT)

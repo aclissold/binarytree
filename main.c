@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 #include <assert.h>
 
@@ -6,17 +7,16 @@
 
 int main()
 {
-	struct node tree = {
-		.data = 1,
-		.left = NULL,
-		.right = NULL,
-	};
+	struct node *tree = NewNode(0);
 
-	bool haszero = present(&tree, 0);
-	bool hasone = present(&tree, 1);
+	bool haszero = lookup(tree, 0);
+	bool hasone = lookup(tree, 1);
 
-	assert(!haszero);
-	assert(hasone);
+	assert(haszero);
+	assert(!hasone);
+
+	free(tree);
+	free(tree);
 
 	return 0;
 }

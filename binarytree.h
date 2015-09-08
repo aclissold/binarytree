@@ -8,9 +8,9 @@ struct node {
 	struct node *left;
 	struct node *right;
 };
-struct node* NewNode(int data);
+struct node *NewNode(int data);
 
 bool lookup(struct node *node, int target);
-struct node* insert(struct node *node, int data);
+struct node *insert(struct node *node, int data);
 
 #endif

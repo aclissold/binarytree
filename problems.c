@@ -1,5 +1,7 @@
 #include "problems.h"
 
+#include <stdlib.h>
+
 #include "binarytree.h"
 
 /* problem 1 */
@@ -25,7 +27,7 @@ struct node *build123()
 	 */
 
 	/* version c */
-	struct node *tree;
+	struct node *tree = NULL;
 	tree = insert(tree, 2);
 	tree = insert(tree, 1);
 	tree = insert(tree, 3);

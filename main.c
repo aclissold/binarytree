@@ -34,10 +34,10 @@ static char *test_problem2()
 	struct node *three = build123();
 	struct node *one = new_node(0);
 	struct node *five = new_node(1);
-	five->left = new_node(2);
-	five->left->left = new_node(3);
-	five->right = new_node(4);
-	five->right->right = new_node(5);
+	insert(five, 2);
+	insert(five, 3);
+	insert(five, 4);
+	insert(five, 5);
 
 	char *message = "test_problem2: incorrect size";
 	t_assert(size(three) == 3, message);

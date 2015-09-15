@@ -24,9 +24,7 @@ static char *test_problem1()
 		t_assert(lookup(tree, i), "test_problem1: node not found");
 	}
 
-	free(tree->left);
-	free(tree->right);
-	free(tree);
+	destroy(tree);
 
 	return 0;
 }

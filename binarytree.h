@@ -9,6 +9,7 @@ struct node {
 	struct node *right;
 };
 struct node *new_node(int data);
+void destroy(struct node *node);
 
 bool lookup(struct node *node, int target);
 struct node *insert(struct node *node, int data);

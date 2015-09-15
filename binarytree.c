@@ -29,6 +29,17 @@ struct node *new_node(int data)
 	return node;
 }
 
+void destroy(struct node *node)
+{
+	if (node == NULL)
+		return;
+	if (node->left != NULL)
+		destroy(node->left);
+	if (node->right != NULL)
+		destroy(node->right);
+	free(node);
+}
+
 struct node *insert(struct node *node, int data)
 {
 	if (node == NULL) {

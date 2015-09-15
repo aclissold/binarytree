@@ -34,3 +34,12 @@ struct node *build123()
 
 	return tree;
 }
+
+/* problem 2 */
+int size(struct node *node)
+{
+	if (node == NULL)
+	    return 0;
+	else
+	    return 1 + size(node->left) + size(node->right);
+}

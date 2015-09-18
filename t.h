@@ -1,4 +1,4 @@
-/* based on http://www.jera.com/techinfo/jtns/jtn002.html */
+// based on http://www.jera.com/techinfo/jtns/jtn002.html
 
 #ifndef T_H
 #define T_H

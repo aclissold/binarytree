@@ -4,10 +4,11 @@
 
 #include "binarytree.h"
 
-/* problem 1 */
+// problem 1
 struct node *build123()
 {
-	/* version a
+	/*
+	// version a
 	struct node *one = new_node(1);
 	struct node *two = new_node(2);
 	struct node *three = new_node(3);
@@ -18,7 +19,8 @@ struct node *build123()
 	return two;
 	*/
 
-	/* version b
+	/*
+	// version b
 	struct node *tree = new_node(2);
 	tree->left = new_node(1);
 	tree->right = new_node(3);
@@ -26,7 +28,7 @@ struct node *build123()
 	return tree;
 	 */
 
-	/* version c */
+	// version c
 	struct node *tree = NULL;
 	tree = insert(tree, 2);
 	tree = insert(tree, 1);
@@ -35,7 +37,7 @@ struct node *build123()
 	return tree;
 }
 
-/* problem 2 */
+// problem 2
 int size(struct node *node)
 {
 	if (node == NULL)
@@ -44,7 +46,7 @@ int size(struct node *node)
 	    return 1 + size(node->left) + size(node->right);
 }
 
-/* problem 3 */
+// problem 3
 int max_depth(struct node *node)
 {
 	if (node == NULL)

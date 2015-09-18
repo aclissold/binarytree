@@ -69,10 +69,31 @@ static char *test_problem3()
 	return 0;
 }
 
+static char *test_problem4() { return 0; }
+static char *test_problem5() { return 0; }
+static char *test_problem6() { return 0; }
+static char *test_problem7() { return 0; }
+static char *test_problem8() { return 0; }
+static char *test_problem9() { return 0; }
+static char *test_problem10() { return 0; }
+static char *test_problem11() { return 0; }
+static char *test_problem12() { return 0; }
+static char *test_problem13() { return 0; }
+static char *test_problem14() { return 0; }
+static char *test_problem15() { return 0; }
+
 static char *all_tests()
 {
-	t_run_test(test_problem1);
-	t_run_test(test_problem2);
-	t_run_test(test_problem3);
+	static char *(*tests[15]) (void) = {
+		test_problem1, test_problem2, test_problem3,
+		test_problem4, test_problem5, test_problem6,
+		test_problem7, test_problem8, test_problem9,
+		test_problem10, test_problem11, test_problem12,
+		test_problem13, test_problem14, test_problem15
+	};
+
+	for (int i = 0; i < 15; ++i)
+		t_run_test(tests[i]);
+
 	return 0;
 }

@@ -13,6 +13,9 @@ static char *test_problem9();
 static char *test_problem10();
 static char *test_problem11();
 static char *test_problem12();
+static char *test_problem13();
+static char *test_problem14();
+static char *test_problem15();
 
 static char *all_tests();
 

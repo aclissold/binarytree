@@ -1,3 +1,6 @@
+// Solutions to the binary tree problems located at
+// http://cslibrary.stanford.edu/110/BinaryTrees.html.
+
 #ifndef PROBLEMS_H
 #define PROBLEMS_H
 

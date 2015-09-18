@@ -1,3 +1,5 @@
+// Implements a binary tree data structure and common operations on it.
+
 #ifndef BINARYTREE_H
 #define BINARYTREE_H
 

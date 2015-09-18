@@ -8,6 +8,8 @@
 #include "tests.h"
 #include "t.h"
 
+static const int NUM_TESTS = 15;
+
 int main()
 {
 	char *result = all_tests();
@@ -84,7 +86,7 @@ static char *test_problem15() { return 0; }
 
 static char *all_tests()
 {
-	static char *(*tests[15]) (void) = {
+	static char *(*tests[NUM_TESTS]) (void) = {
 		test_problem1, test_problem2, test_problem3,
 		test_problem4, test_problem5, test_problem6,
 		test_problem7, test_problem8, test_problem9,
@@ -92,7 +94,7 @@ static char *all_tests()
 		test_problem13, test_problem14, test_problem15
 	};
 
-	for (int i = 0; i < 15; ++i)
+	for (int i = 0; i < NUM_TESTS; ++i)
 		t_run_test(tests[i]);
 
 	return 0;

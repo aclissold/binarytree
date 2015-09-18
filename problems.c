@@ -43,3 +43,18 @@ int size(struct node *node)
 	else
 	    return 1 + size(node->left) + size(node->right);
 }
+
+/* problem 3 */
+int max_depth(struct node *node)
+{
+	if (node == NULL)
+		return 0;
+	else if (node->left == NULL && node->right == NULL)
+		return 1;
+
+	int l = max_depth(node->left);
+	int r = max_depth(node->right);
+	int depth = l > r ? l : r;
+
+	return 1 + depth;
+}

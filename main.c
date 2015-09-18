@@ -51,9 +51,28 @@ static char *test_problem2()
 	return 0;
 }
 
+static char *test_problem3()
+{
+	struct node *empty = NULL;
+	char *message = "test_problem3: incorrect depth";
+	t_assert(max_depth(empty) == 0, message);
+
+	struct node *tree = new_node(1);
+	t_assert(max_depth(tree) == 1, message);
+	insert(tree, 0);
+	t_assert(max_depth(tree) == 2, message);
+	insert(tree, 2);
+	t_assert(max_depth(tree) == 2, message);
+	insert(tree, 3);
+	t_assert(max_depth(tree) == 3, message);
+
+	return 0;
+}
+
 static char *all_tests()
 {
 	t_run_test(test_problem1);
 	t_run_test(test_problem2);
+	t_run_test(test_problem3);
 	return 0;
 }
